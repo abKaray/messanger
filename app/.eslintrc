@@ -1,0 +1,53 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+    "airbnb",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn",
+    "import/prefer-default-export": "off",
+    "react/prop-types": 0,
+    "camelcase": 0,
+    "consistent-return": 0,
+    "jsx-a11y/label-has-associated-control": [2, {
+      "assert": "either"
+    }],
+    "newline-before-return": 1,
+    "react/forbid-prop-types": 0,
+    "react/jsx-curly-newline": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-filename-extension": [
+      2,
+      { "extensions": [".js", ".jsx", ".tsx", ".ts"] }
+    ],
+    "react/jsx-props-no-spreading": 0
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+  },
+  "plugins": []
+}

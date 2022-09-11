@@ -1,0 +1,1 @@
+export { AvatarStub } from './AvatarStub';

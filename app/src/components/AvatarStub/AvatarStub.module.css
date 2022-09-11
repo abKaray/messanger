@@ -1,0 +1,22 @@
+.avatar {
+  width: 24px;
+  height: 24px;
+}
+
+.avatarStub {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background-color: aquamarine;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.avatarName {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  margin: 0;
+}

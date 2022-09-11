@@ -1,0 +1,44 @@
+version: "3.7"
+
+services: 
+  client:
+    build: ./app
+    container_name: client_container
+    ports: 
+      - 5000:5000
+    working_dir: /app
+    volumes: 
+      - ./app/src:/app/src
+    links: 
+      - server
+    command: npm start
+
+  server:
+    build: ./server
+    container_name: node_server_container
+    depends_on:
+      - mysql
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_DB: back
+    ports:
+      - 8000:8000
+    volumes:
+      - ./server:/app
+    links:
+      - mysql
+    command: npm start
+
+  mysql: 
+    image: mysql:5.7
+    container_name: mysql_container
+    volumes:
+      - back-mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: back
+
+volumes:
+  back-mysql:

@@ -1,0 +1,33 @@
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+  background-color: var(--color-grey);
+  padding: 0 20px;
+}
+
+.itemsWrapper {
+  display: flex;
+  width: 40%;
+}
+
+.itemsWrapper:last-child {
+  justify-content: end;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-white)
+}
+
+.listItem {
+  margin-right: 10%;
+}
+
+.listItem:nth-child(2) {
+  margin-right: 0;
+}

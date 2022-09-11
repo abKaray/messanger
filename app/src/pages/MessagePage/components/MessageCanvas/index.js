@@ -1,0 +1,1 @@
+export { MessageCanvas } from './MessageCanvas';

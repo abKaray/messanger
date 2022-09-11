@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 42px;
+  width: 300px;
+}
+
+.input {
+  height: 30px;
+  border-radius: 4px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.error {
+  color: var(--color-error);
+  font-size: 0.75rem;
+}
+
+.label {
+  font-size: 20px;
+  color: var(--color-grey);
+}
