@@ -1,6 +1,7 @@
 .wrapper {
   width: 100vw;
   height: 100vh;
+  background: linear-gradient(to top right, #fc2c77 0%, #6c4079 100%);
 }
 
 .innerWrapper {

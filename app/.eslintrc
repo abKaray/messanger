@@ -38,6 +38,16 @@
     "react/forbid-prop-types": 0,
     "react/jsx-curly-newline": 0,
     "react/react-in-jsx-scope": 0,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+   ],
     "react/jsx-filename-extension": [
       2,
       { "extensions": [".js", ".jsx", ".tsx", ".ts"] }
@@ -48,6 +58,12 @@
     "react": {
       "version": "detect"
     },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "src/"],
+      }
+    }
   },
   "plugins": []
 }

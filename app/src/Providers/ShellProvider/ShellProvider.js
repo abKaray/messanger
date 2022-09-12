@@ -2,6 +2,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 import { AuthProviders } from '../AuthProviders';
+import { ThemeProvider } from '../ThemeProvider';
 
 export const ShellProvider = ({ children }) => {
   const queryClient = new QueryClient();
@@ -9,7 +10,9 @@ export const ShellProvider = ({ children }) => {
   return (
     <Router>
       <QueryClientProvider client={queryClient}>
-        <AuthProviders>{children}</AuthProviders>
+        <ThemeProvider>
+          <AuthProviders>{children}</AuthProviders>
+        </ThemeProvider>
       </QueryClientProvider>
     </Router>
   );
